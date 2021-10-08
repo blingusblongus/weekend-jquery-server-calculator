@@ -1,0 +1,26 @@
+[ ] UI 
+    [ ] 2 input elements for values
+    [ ] input type of operation
+    [ ] submit button
+    [ ] clear button
+
+[ ] client.js
+    [ ] bundle data
+    [ ] POST
+        [ ] send data
+        [ ] trigger GET
+    [ ] submit handler
+    [ ] clear data
+    [ ] update from GET
+
+[ ] server.js
+    [ ] Logic
+        [ ] switch statement
+        [ ] Addition
+        [ ] Subtraction
+        [ ] Multiplication
+    [ ] POST route
+        [ ] include response
+    [ ] Data
+        [ ] result variable
+        [ ] Store history of calculations
