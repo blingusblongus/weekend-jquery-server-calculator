@@ -38,4 +38,5 @@ Optional:
 
 
 Stretch:
-[ ] 
+[ ] clear calculator-display after GET
+[ ] figure out data-clearing bug

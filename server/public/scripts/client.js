@@ -12,7 +12,7 @@ let dot = false;
 
 $(function(){
     console.log('jquery loaded');
-
+    justLoaded = true;
     //GET existing history, if any
     getCalculate();
 
@@ -133,13 +133,13 @@ function postCalculate(){
     })
 }
 
-function render(data){
+function render(serverData){
     //clear input fields and history list
     $('.number-input').val('');
     $('#history-list').empty();
 
     //render history for each item
-    for(let item of data){
+    for(let item of serverData){
         $('#history-list').append(`
         <li>${item.firstTerm} ${item.op} ${item.secondTerm} = 
         ${item.result}</li>
@@ -150,7 +150,9 @@ function render(data){
     if(justLoaded){
         justLoaded = false;
     }else{
-        $('#result-span').html(data[0].result);
+        let calcResult = serverData[0].result
+        $('#result-span').html(calcResult);
+        $('#calculator-display').html(calcResult);
     }
 
     //clear client-side data storage
@@ -160,5 +162,9 @@ function render(data){
         op: ''
     }
 
-    updateCalcDisplay();
+    //reset values for the buttonPad
+    firstTerm = true;
+    dot = false;
+
+    
 }
