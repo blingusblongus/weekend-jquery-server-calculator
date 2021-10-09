@@ -1,5 +1,8 @@
-body {
-    background-color: pink;
+#calculator-display {
+    width: 10em;
+    height: 1.5em;
+    border: 1px solid gray;
+    margin-bottom: 4px;
 }
 
 #btn-pad {

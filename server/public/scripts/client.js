@@ -7,7 +7,6 @@ let data = {
 }
 
 let justLoaded = true;
-let activeOp = '';
 
 $(function(){
     console.log('jquery loaded');
@@ -18,8 +17,21 @@ $(function(){
     //click handlers
     $('#btn-calculate').on('click', submit);
     $('.btn-op').on('click', setActiveOp);
+    $('#btn-clear').on('click', clearValues);
 
 })
+
+function clearValues(){
+    //reset data
+    data = {
+        firstTerm: '',
+        secondTerm: '',
+        op: ''
+    }
+
+    //clear number inputs
+    $('.number-input').val('');
+}
 
 function setActiveOp(){
     data.op = $(this).html();
@@ -31,7 +43,7 @@ function submit() {
         console.log('no op selected');
         return;
     }
-    
+
     //set data values
     data = {
         firstTerm: $('#first-term').val(),
