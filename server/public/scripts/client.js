@@ -7,6 +7,7 @@ let data = {
 }
 
 let justLoaded = true;
+let activeOp = '';
 
 $(function(){
     console.log('jquery loaded');
@@ -14,7 +15,32 @@ $(function(){
     //GET existing history, if any
     getCalculate();
 
+    //click handlers
+    $('#btn-calculate').on('click', submit);
+    $('.btn-op').on('click', setActiveOp);
+
 })
+
+function setActiveOp(){
+    data.op = $(this).html();
+}
+
+function submit() {
+    //if no op selected, do nothing
+    if(!data.op){
+        console.log('no op selected');
+        return;
+    }
+    //set data values
+    data = {
+        firstTerm: $('#first-term').val(),
+        secondTerm: $('#second-term').val(),
+        op: data.op
+    }
+
+    //send post request
+    postCalculate(data);
+}
 
 function getCalculate(){
     $.ajax({
@@ -29,9 +55,23 @@ function getCalculate(){
     })
 }
 
+function postCalculate(){
+    $.ajax({
+        method: 'POST',
+        url: '/calculate',
+        data: data
+    }).then((res) => {
+        console.log(res);
+        getCalculate();
+    }).catch((res)=>{
+        console.log(res);
+    })
+}
+
 function render(data){
-    //clear input fields
+    //clear input fields and history list
     $('.number-input').val('');
+    $('#history-list').empty();
 
     //render history for each item
     for(let item of data){
@@ -47,6 +87,11 @@ function render(data){
     }else{
         $('#result-span').html(data[0].result);
     }
-    
 
+    //clear client-side data storage
+    data = {
+        firstTerm: '',
+        secondTerm: '',
+        op: ''
+    }
 }
