@@ -3,6 +3,7 @@
     [ ] input type of operation
     [ ] submit button
     [ ] clear button
+    [ ] history container
 
 [ ] client.js
     [ ] bundle data
@@ -13,7 +14,7 @@
     [ ] clear data
     [ ] update from GET
 
-[ ] server.js
+[x] server.js
     [x] express
         [x] serve static files
     [x] bodyParser
@@ -22,12 +23,12 @@
         [x] Addition
         [x] Subtraction
         [x] Multiplication
-    [ ] GET route '/calculate'
-        [ ] send result
+    [x] GET route '/calculate'
+        [x] send result
     [x] POST route
         [x] link to calculator
         [x] include response code
-        [ ] store response
-    [ ] Data
+        [x] store result
+    [x] Data
         [x] result variable
-        [ ] Store history of calculations
+        [x] Store history of calculations
