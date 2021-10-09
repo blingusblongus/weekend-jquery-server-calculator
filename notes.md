@@ -32,3 +32,6 @@
     [x] Data
         [x] result variable
         [x] Store history of calculations
+
+Optional:
+[ ] .unshift instead of .push to history list, so most recent are on top?

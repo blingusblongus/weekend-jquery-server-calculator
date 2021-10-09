@@ -26,7 +26,7 @@ app.get('/calculate', (req, res) => {
 // update data by calling calculator
 app.post('/calculate', (req, res) => {
     console.log('/calculate POST');      
-    data.push({
+    data.unshift({
         firstTerm: req.body.firstTerm,
         secondTerm: req.body.secondTerm,
         op: req.body.op,
