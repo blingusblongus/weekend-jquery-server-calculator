@@ -14,16 +14,20 @@
     [ ] update from GET
 
 [ ] server.js
-    [ ] express
-        [ ] serve static files
-    [ ] bodyParser
-    [ ] Logic
-        [ ] switch statement
-        [ ] Addition
-        [ ] Subtraction
-        [ ] Multiplication
-    [ ] POST route
-        [ ] include response
+    [x] express
+        [x] serve static files
+    [x] bodyParser
+    [x] Calculator Logic
+        [x] switch statement
+        [x] Addition
+        [x] Subtraction
+        [x] Multiplication
+    [ ] GET route '/calculate'
+        [ ] send result
+    [x] POST route
+        [x] link to calculator
+        [x] include response code
+        [ ] store response
     [ ] Data
         [ ] result variable
         [ ] Store history of calculations
