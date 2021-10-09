@@ -1,8 +1,14 @@
+@font-face {
+    font-family: lcd14;
+    src: url('LCD14.otf');
+}
+
 #calculator-display {
     width: 10em;
     height: 1.5em;
     border: 1px solid gray;
     margin-bottom: 4px;
+    font-family: lcd14;
 }
 
 #btn-pad {
