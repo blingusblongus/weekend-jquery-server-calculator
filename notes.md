@@ -29,5 +29,5 @@
         [x] include response code
         [ ] store response
     [ ] Data
-        [ ] result variable
+        [x] result variable
         [ ] Store history of calculations
