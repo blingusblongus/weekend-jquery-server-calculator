@@ -1,18 +1,18 @@
-[ ] UI 
-    [ ] 2 input elements for values
-    [ ] input type of operation
-    [ ] submit button
-    [ ] clear button
-    [ ] history container
+[x] UI 
+    [x] 2 input elements for values
+    [x] input type of operation
+    [x] submit button
+    [x] clear button
+    [x] history container
 
-[ ] client.js
-    [ ] bundle data
-    [ ] POST
-        [ ] send data
-        [ ] trigger GET
-    [ ] submit handler
-    [ ] clear data
-    [ ] update from GET
+[x] client.js
+    [x] bundle data
+    [x] POST
+        [x] send data
+        [x] trigger GET
+    [x] submit handler
+    [x] clear data
+    [x] update from GET
 
 [x] server.js
     [x] express
@@ -34,4 +34,8 @@
         [x] Store history of calculations
 
 Optional:
-[ ] .unshift instead of .push to history list, so most recent are on top?
+[x] .unshift instead of .push to history list, so most recent are on top?
+
+
+Stretch:
+[ ] 

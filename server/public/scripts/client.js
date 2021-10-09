@@ -31,6 +31,7 @@ function submit() {
         console.log('no op selected');
         return;
     }
+    
     //set data values
     data = {
         firstTerm: $('#first-term').val(),

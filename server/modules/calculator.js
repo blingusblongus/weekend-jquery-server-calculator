@@ -15,7 +15,7 @@ function calculator(obj){
         case '/':
             return firstTerm / secondTerm;
         default:
-            return "ERROR";
+            return "CALCULATOR ERROR";
     }
 }
 
