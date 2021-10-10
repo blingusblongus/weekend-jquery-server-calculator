@@ -36,6 +36,7 @@
 Optional:
 [x] .unshift instead of .push to history list, so most recent are on top?
 [ ] make it so pushing an operator button first uses the last result
+[ ] Don't display previous answer on page load
 
 
 Stretch:

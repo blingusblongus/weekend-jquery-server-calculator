@@ -16,16 +16,21 @@ $(function(){
     //GET existing history, if any
     getCalculate();
 
-    //click handlers
-    $('#btn-calculate').on('click', submit);
-    $('.btn-op').on('click', setActiveOp);
-    $('#btn-clear').on('click', clearValues);
+    // //click handlers
+    // $('#btn-calculate').on('click', submit);
+    // $('.btn-op').on('click', setActiveOp);
+    // $('#btn-clear').on('click', clearValues);
 
     //stretch click handlers
     $('.btn-pad-btn').on('click', btnPadEnter);
     $('#clear-history').on('click', deleteCalculate);
+    $('#history-list').on('click', '.history-item', reRun);
 
 })
+
+function reRun() {
+    console.log($(this).data());
+}
 
 function btnPadEnter(){
     console.log('btnpadproess')
@@ -95,23 +100,23 @@ function setActiveOp(){
 }
 
 //deprecated for stretch
-function submit() {
-    //if no op selected, do nothing
-    if(!data.op){
-        console.log('no op selected');
-        return;
-    }
+// function submit() {
+//     //if no op selected, do nothing
+//     if(!data.op){
+//         console.log('no op selected');
+//         return;
+//     }
 
-    //set data values
-    data = {
-        firstTerm: $('#first-term').val(),
-        secondTerm: $('#second-term').val(),
-        op: data.op
-    }
+//     //set data values
+//     data = {
+//         firstTerm: $('#first-term').val(),
+//         secondTerm: $('#second-term').val(),
+//         op: data.op
+//     }
 
-    //send post request
-    postCalculate(data);
-}
+//     //send post request
+//     postCalculate(data);
+// }
 
 function submitPad(){
     postCalculate(data);
@@ -166,14 +171,19 @@ function render(serverData = []){
 
     //render history for each item
     for(let item of serverData){
-        $('#history-list').append(`
-        <li>${item.firstTerm} ${item.op} ${item.secondTerm} = 
+        //bundle item data into li element
+        let li = $(`
+        <li class="history-item">${item.firstTerm} ${item.op} ${item.secondTerm} = 
         ${item.result}</li>
-        `)
+        `).data(item);
+
+        //append li to DOM
+        $('#history-list').append(li);
     }
 
     // Render result
     let calcResult = serverData[0].result
+
     $('#result-span').html(calcResult);
     $('#calculator-display').html(calcResult);
 
