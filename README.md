@@ -34,3 +34,11 @@ A simple calculator app in which calculations are run in the server. It is desig
 - [VSCode](https://code.visualstudio.com/)
 - [Express](https://www.npmjs.com/package/express)
 - [Body Parser](https://www.npmjs.com/package/body-parser)
+
+## Acknowledgement
+
+Thanks to [Prime Digital Academy](https://www.primeacademy.io/) who equipped and helped me to make this application a reality.
+
+## Support
+
+If you have questions, contact me at rutherford.t.b@gmail.com
