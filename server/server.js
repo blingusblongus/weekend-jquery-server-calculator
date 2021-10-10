@@ -31,8 +31,8 @@ app.post('/calculate', (req, res) => {
         secondTerm: req.body.secondTerm,
         op: req.body.op,
         result: calculator(req.body)
-    })
-    res.sendStatus(201);
+    });
+    res.sendStatus(200);
 })
 
 // clear data storage
