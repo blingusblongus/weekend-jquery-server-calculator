@@ -23,6 +23,7 @@ $(function(){
 
     //stretch click handlers
     $('.btn-pad-btn').on('click', btnPadEnter);
+    $('#clear-history').on('click', deleteCalculate);
 
 })
 
@@ -59,6 +60,10 @@ function btnPadEnter(){
             if(data.firstTerm && data.secondTerm){
                 submitPad();
             }
+            break;
+        case btn.attr('id') === 'btn-pad-clear':
+            clearValues();
+            $('#calculator-display').val('');
             break;
         default:
             console.log('switch case error');
@@ -139,10 +144,25 @@ function postCalculate(){
     })
 }
 
-function render(serverData){
+function deleteCalculate(){
+    $.ajax({
+        method: 'DELETE',
+        url: '/calculate',
+        success: function (res){
+            getCalculate();
+        }
+    })
+}
+
+function render(serverData = []){
     //clear input fields and history list
     $('.number-input').val('');
     $('#history-list').empty();
+
+    //Don't even try to render if serverData is empty
+    if(!serverData[0]){
+        return;
+    }
 
     //render history for each item
     for(let item of serverData){
@@ -152,14 +172,11 @@ function render(serverData){
         `)
     }
 
-    //render result to result-span if not on initial render
-    if(justLoaded){
-        justLoaded = false;
-    }else{
-        let calcResult = serverData[0].result
-        $('#result-span').html(calcResult);
-        $('#calculator-display').html(calcResult);
-    }
+    // Render result
+    let calcResult = serverData[0].result
+    $('#result-span').html(calcResult);
+    $('#calculator-display').html(calcResult);
+
 
     //clear client-side data storage
     data = {
@@ -172,5 +189,4 @@ function render(serverData){
     firstTerm = true;
     dot = false;
 
-    
 }
