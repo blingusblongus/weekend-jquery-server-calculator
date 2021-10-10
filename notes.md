@@ -32,6 +32,14 @@
     [x] Data
         [x] result variable
         [x] Store history of calculations
+[ ] Readme
+    [x] Name
+    [x] Description
+    [ ] Screen Shot
+    [x] Prerequisites
+    [x] Installation
+    [x] Usage
+    [x] Built with
 
 Optional:
 [x] .unshift instead of .push to history list, so most recent are on top?

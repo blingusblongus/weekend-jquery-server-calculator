@@ -1,9 +1,34 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Server-side Calculator
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+*Duration: 3 day task*
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+A simple calculator app in which calculations are run in the server. It is designed with a layout and functionality meant to emulate traditional physical calculator appearance and user input design, while also displaying a complete history of calculations run. 
+
+## Screen Shot
+
+## Pre-requisites
+
+- Node.js
+
+## Installation
+
+1. Clone repo
+2. Run `npm install` to acquire express and body-parser
+3. `npm start` to start the server. Default port is 5000
+4. Use a browser to connect to the server and open the app
+
+## Usage
+
+1. Click the numbered buttons to input the first term of the calculation
+2. Click a button with an operator (+, -, *, /) to choose the type of calculation
+3. Continue clicking numbered buttons to input the second term of the equation.
+4. Click the button with the equals sign to process the calculation, and view the result in the display area
+5. Click the button labeled 'clear history' to delete the logged calculations from the server and the browser
+
+## Built With
+
+- [VSCode](https://code.visualstudio.com/)
+- [Express](https://www.npmjs.com/package/express)
+- [Body Parser](https://www.npmjs.com/package/body-parser)
