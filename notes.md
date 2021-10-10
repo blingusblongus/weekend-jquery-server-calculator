@@ -35,8 +35,9 @@
 
 Optional:
 [x] .unshift instead of .push to history list, so most recent are on top?
+[ ] make it so pushing an operator button first uses the last result
 
 
 Stretch:
-[ ] clear calculator-display after GET
-[ ] figure out data-clearing bug
+[x] clear calculator-display after GET
+[x] figure out data-clearing bug

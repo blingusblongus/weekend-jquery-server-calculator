@@ -3,12 +3,18 @@
     src: url('LCD14.otf');
 }
 
+#display-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
 #calculator-display {
     width: 10em;
     height: 1.5em;
     border: 1px solid gray;
-    margin-bottom: 4px;
     font-family: lcd14;
+    margin-right: 5px;
 }
 
 #btn-pad {
@@ -16,3 +22,4 @@
     grid-template-columns: repeat(4, 2em);
     grid-template-rows: repeat(4, 2em);
 }
+
