@@ -34,3 +34,10 @@ app.post('/calculate', (req, res) => {
     })
     res.sendStatus(201);
 })
+
+// clear data storage
+app.delete('/calculate', (req, res)=>{
+    data.splice(0, data.length);
+
+    res.sendStatus(204);
+})
