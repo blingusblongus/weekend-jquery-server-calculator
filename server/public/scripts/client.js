@@ -29,7 +29,6 @@ $(function(){
 function btnPadEnter(){
     console.log('btnpadproess')
     let btn = $(this);
-    let term = firstTerm ? data.firstTerm : data.secondTerm;
 
     switch(true){
         case btn.hasClass('dot'):
@@ -40,14 +39,21 @@ function btnPadEnter(){
             }
             dot = true;
             break;
+        case btn.attr('id') === 'btn-0':
+            //prevent the 0 button from being the first one pressed
+            if(!data.firstTerm || (!firstTerm && !data.secondTerm)){
+                break;
+            }
         case btn.hasClass('num'):
             firstTerm ?
                 data.firstTerm += btn.html() : data.secondTerm += btn.html();
             break;
         case btn.hasClass('op'):
-            data.op = btn.html();
-            dot = false;
-            firstTerm = false;
+            if(data.firstTerm){
+                data.op = btn.html();
+                dot = false;
+                firstTerm = false;
+            }   
             break;
         case btn.hasClass('equals'):
             if(data.firstTerm && data.secondTerm){
