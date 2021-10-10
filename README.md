@@ -6,7 +6,9 @@
 
 A simple calculator app in which calculations are run in the server. It is designed with a layout and functionality meant to emulate traditional physical calculator appearance and user input design, while also displaying a complete history of calculations run. 
 
-## Screen Shot
+## Screenshot
+
+![images/screenshot.png]
 
 ## Pre-requisites
 

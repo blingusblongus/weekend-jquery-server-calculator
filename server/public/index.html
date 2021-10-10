@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,29 +10,32 @@
     <script src="scripts/client.js"></script>
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
     <h1>Server-Side Calculator</h1>
-    <div id="display-container">
-        <div id="calculator-display"></div>
-        <button class="btn-pad-btn" id="btn-pad-clear">C</button>
-    </div>
-    <div id="btn-pad">
-        <button class="btn-pad-btn num" id="btn-7">7</button>
-        <button class="btn-pad-btn num" id="btn-8">8</button>
-        <button class="btn-pad-btn num" id="btn-9">9</button>
-        <button class="btn-pad-btn op" id="btn-plus">+</button>
-        <button class="btn-pad-btn num" id="btn-4">4</button>
-        <button class="btn-pad-btn num" id="btn-5">5</button>
-        <button class="btn-pad-btn num" id="btn-6">6</button>
-        <button class="btn-pad-btn op" id="btn-minus">-</button>
-        <button class="btn-pad-btn num" id="btn-1">1</button>
-        <button class="btn-pad-btn num" id="btn-2">2</button>
-        <button class="btn-pad-btn num" id="btn-3">3</button>
-        <button class="btn-pad-btn op" id="btn-mult">*</button>
-        <button class="btn-pad-btn num" id="btn-0">0</button>
-        <button class="btn-pad-btn num dot" id="btn-dot">.</button>
-        <button class="btn-pad-btn equals" id="btn-equals">=</button>
-        <button class="btn-pad-btn op" id="btn-div">/</button>
+    <div id="calc-body">
+        <div id="display-container">
+            <div id="calculator-display"></div>
+            <button class="btn-pad-btn" id="btn-pad-clear">C</button>
+        </div>
+        <div id="btn-pad">
+            <button class="btn-pad-btn num" id="btn-7">7</button>
+            <button class="btn-pad-btn num" id="btn-8">8</button>
+            <button class="btn-pad-btn num" id="btn-9">9</button>
+            <button class="btn-pad-btn op" id="btn-plus">+</button>
+            <button class="btn-pad-btn num" id="btn-4">4</button>
+            <button class="btn-pad-btn num" id="btn-5">5</button>
+            <button class="btn-pad-btn num" id="btn-6">6</button>
+            <button class="btn-pad-btn op" id="btn-minus">-</button>
+            <button class="btn-pad-btn num" id="btn-1">1</button>
+            <button class="btn-pad-btn num" id="btn-2">2</button>
+            <button class="btn-pad-btn num" id="btn-3">3</button>
+            <button class="btn-pad-btn op" id="btn-mult">*</button>
+            <button class="btn-pad-btn num" id="btn-0">0</button>
+            <button class="btn-pad-btn num dot" id="btn-dot">.</button>
+            <button class="btn-pad-btn equals" id="btn-equals">=</button>
+            <button class="btn-pad-btn op" id="btn-div">/</button>
+        </div>
     </div>
     <div id="history-container">
         <h2>History:</h2>
@@ -39,4 +43,5 @@
         <ul id="history-list"></ul>
     </div>
 </body>
+
 </html>

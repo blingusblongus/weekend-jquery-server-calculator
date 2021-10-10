@@ -13,9 +13,12 @@
 #calculator-display {
     width: 10em;
     height: 1.5em;
-    border: 1px solid gray;
+    border: 4px solid black;
     font-family: lcd14;
     margin-right: 5px;
+    background-color: green;
+    border-radius: 10px;
+    
 }
 
 #btn-pad {
@@ -24,3 +27,13 @@
     grid-template-rows: repeat(4, 2em);
 }
 
+#calc-body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: gray;
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 10px;
+    width: 200px;
+}
