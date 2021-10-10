@@ -8,11 +8,11 @@ A simple calculator app in which calculations are run in the server. It is desig
 
 ## Screenshot
 
-![images/screenshot.png]
+![Example](images/screenshot.png)
 
 ## Pre-requisites
 
-- Node.js
+- [Node.js](https://nodejs.org/)
 
 ## Installation
 
