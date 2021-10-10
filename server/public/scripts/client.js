@@ -16,11 +16,6 @@ $(function(){
     //GET existing history, if any
     getCalculate();
 
-    // //click handlers
-    // $('#btn-calculate').on('click', submit);
-    // $('.btn-op').on('click', setActiveOp);
-    // $('#btn-clear').on('click', clearValues);
-
     //stretch click handlers
     $('.btn-pad-btn').on('click', btnPadEnter);
     $('#clear-history').on('click', deleteCalculate);
@@ -90,37 +85,14 @@ function clearValues(){
         secondTerm: '',
         op: ''
     }
-
-    //clear number inputs
-    $('.number-input').val('');
 }
 
 function setActiveOp(){
     data.op = $(this).html();
 }
 
-//deprecated for stretch
-// function submit() {
-//     //if no op selected, do nothing
-//     if(!data.op){
-//         console.log('no op selected');
-//         return;
-//     }
-
-//     //set data values
-//     data = {
-//         firstTerm: $('#first-term').val(),
-//         secondTerm: $('#second-term').val(),
-//         op: data.op
-//     }
-
-//     //send post request
-//     postCalculate(data);
-// }
-
 function submitPad(){
     postCalculate(data);
-
 }
 
 function getCalculate(){
@@ -160,8 +132,7 @@ function deleteCalculate(){
 }
 
 function render(serverData = []){
-    //clear input fields and history list
-    $('.number-input').val('');
+    //clear history list
     $('#history-list').empty();
 
     //Don't even try to render if serverData is empty
@@ -183,8 +154,6 @@ function render(serverData = []){
 
     // Render result
     let calcResult = serverData[0].result
-
-    $('#result-span').html(calcResult);
     $('#calculator-display').html(calcResult);
 
 
