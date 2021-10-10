@@ -13,11 +13,13 @@
 #calculator-display {
     width: 10em;
     height: 1.5em;
-    border: 4px solid black;
+    border-left: 3px solid rgb(35, 102, 35);
+    border-top: 3px solid rgb(35, 102, 35);
+    border-right: 3px solid rgb(128, 211, 128);
+    border-bottom: 3px solid rgb(128, 211, 128);
     font-family: lcd14;
     margin-right: 5px;
-    background-color: green;
-    border-radius: 10px;
+    background-color: rgb(70, 161, 70);
     
 }
 
